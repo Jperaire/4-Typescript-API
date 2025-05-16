@@ -1,0 +1,12 @@
+body {
+    font-family: var(--fuente-principal);
+    color: var(--color-principal);
+}
+
+.container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

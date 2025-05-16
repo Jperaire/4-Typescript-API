@@ -1,0 +1,30 @@
+/* NEXT BUTTON */
+.next-button {
+    background-color: #03d1dc;
+    border: 1px solid #03d1dc;
+    border-radius: 15px;
+    padding: 20px 50px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.next-button:hover {
+    background-color: #01b8c1;
+    box-shadow: 0 4px 12px rgba(3, 209, 220, 0.4);
+}
+
+/* SCORE BUTTONS */
+.score {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.score-btn {
+    padding: 10px;
+}
+
+.selected {
+    background-color: #fff04e;
+}
