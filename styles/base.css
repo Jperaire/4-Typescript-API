@@ -13,7 +13,8 @@
 }
 
 :root {
-    --color-principal: rgb(86, 86, 86);
+    --color-principal: #9071bb;
+    --color-secundario: #f5c82e;
     --fuente-principal: "Montserrat", sans-serif;
     --espaciado: 1rem;
 }

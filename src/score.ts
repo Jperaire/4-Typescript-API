@@ -2,9 +2,13 @@ import { scoreButtons } from "./dom.js";
 import { currentScore } from "./index.js";
 import { currentJoke } from "./jokes.js";
 import { reportAcudits } from "./state.js";
+
 export const removeClass = () => {
-    scoreButtons.forEach((scoreButton) => scoreButton.classList.remove("selected"));
+    scoreButtons.forEach((scoreButton) =>
+        scoreButton.classList.remove("selected")
+    );
 };
+
 export const sendScore = () => {
     if (currentScore) {
         reportAcudits.push({

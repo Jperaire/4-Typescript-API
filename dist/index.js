@@ -1,14 +1,17 @@
+import { changeBlobShape } from "./blobs.js";
 import { nextButton, scoreButtons } from "./dom.js";
-import { fetchJoke } from "./jokesManage.js";
-import { removeClass, sendScore } from "./scoreManage.js";
+import { fetchJoke } from "./jokes.js";
+import { removeClass, sendScore } from "./score.js";
 import { reportAcudits } from "./state.js";
 import { fetchWeather } from "./weather.js";
 export let currentScore = 0;
 fetchWeather();
 fetchJoke();
+changeBlobShape();
 scoreButtons?.forEach((scoreButton) => {
-    scoreButton.addEventListener("click", () => {
-        currentScore = Number(scoreButton.textContent);
+    const button = scoreButton;
+    button.addEventListener("click", () => {
+        currentScore = Number(button.dataset.score);
         removeClass();
         scoreButton.classList.add("selected");
     });
@@ -17,6 +20,7 @@ nextButton?.addEventListener("click", () => {
     removeClass();
     sendScore();
     fetchJoke();
+    changeBlobShape();
     currentScore = 0;
     console.log(reportAcudits);
 });

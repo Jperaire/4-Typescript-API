@@ -14,11 +14,8 @@ export const fetchWeather = () => {
         .then((res) => res.json())
         .then((data) => {
             printWeather(data.current);
-            console.log(data.current);
         });
 };
-// temp_c;
-// condition.icon y condition.text
 
 export const printWeather = (data: WeatherData) => {
     const temperatureP = document.createElement("p");

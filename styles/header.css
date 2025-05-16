@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: flex-start;
     padding: 20px;
-    color: var(--color-principal);
+    color: #000;
 }
 
 .weather img {
@@ -12,9 +12,9 @@
 }
 
 .weather .dec {
-    width: 1.5px;
+    width: 1.8px;
     height: 35px;
-    background-color: var(--color-principal);
+    background-color: #000;
     margin-right: 10px;
 }
 

@@ -1,19 +1,44 @@
-.tarjeta {
-    width: 80%;
+.magicpattern {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     max-width: 700px;
-    height: 80%;
-    border: 1px solid #fff;
-    border-radius: 15px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1),
-        -10px 0px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease;
+}
+
+.magicpattern.blob-1 {
+    background-image: url("../assets/blobs/blob-1.png");
+}
+
+.magicpattern.blob-2 {
+    background-image: url("../assets/blobs/blob-2.png");
+}
+
+.magicpattern.blob-3 {
+    background-image: url("../assets/blobs/blob-3.png");
+}
+
+.tarjeta {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     text-align: center;
+    color: #f5f3f8;
+}
+
+.tarjeta h1 {
+    font-size: 1.2rem;
 }
 
 .acudit {
-    width: 80%;
+    width: 60%;
+    font-weight: 500;
+    font-size: 0.8rem;
 }
