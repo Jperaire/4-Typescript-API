@@ -32,7 +32,7 @@ L’aplicació alterna acudits de dues fonts diferents i permet votar cada acudi
 1. Clona el repositori:
 
 ```bash
-git clone https://github.com/Jperaire/4-Typescript-API
+git clone https://github.com/Jperaire/4-Typescript-API-Nivell3
 ```
 
 2. Entra a la carpeta:
