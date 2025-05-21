@@ -11,18 +11,27 @@ interface WeatherData {
 
 export const fetchWeather = () => {
     fetch(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${CITY}`)
-        .then((res) => res.json())
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error(`Error: ${res.status}`);
+            }
+            return res.json();
+        })
         .then((data) => {
+            if (!data.current) {
+                throw new Error("Falta la propiedad 'current'");
+            }
             printWeather(data.current);
-        });
+        })
+        .catch((error) => console.log("Algo salió mal:", error.message));
 };
 
-export const printWeather = (data: WeatherData) => {
+export const printWeather = ({ temp_c, condition }: WeatherData) => {
     const temperatureP = document.createElement("p");
-    temperatureP.textContent = `${data.temp_c} ºC`;
+    temperatureP.textContent = `${temp_c} ºC`;
 
     const weatherIcon = document.createElement("img");
-    weatherIcon.src = data.condition.icon;
+    weatherIcon.src = condition.icon;
 
     weatherDiv?.prepend(weatherIcon);
     weatherDiv?.append(temperatureP);
